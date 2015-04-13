@@ -1,5 +1,23 @@
-execute pathogen#infect()
 syntax on
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+"
+" " let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'mikewest/vimroom'
+Plugin 'tpope/vim-sensible'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'thoughtbot/vim-rspec'
+
+call vundle#end()            " required
+
 filetype plugin indent on
 set number
 inoremap <Esc> <Esc>:w<CR>
@@ -20,3 +38,9 @@ map , \
 let mapleader = ","
 
 set clipboard=unnamed
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
