@@ -1,0 +1,11 @@
+"Rspec mappings
+map <Leader>rt :wa<CR>:call VimuxRunCommand("clear; bundle exec rspec " . bufname("%"))<CR>
+map <Leader>t :wa<CR>:call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+map <Leader>ra :wa<CR>:call VimuxRunCommand("clear; bundle exec rspec")<CR>
+map <Leader>rs :wa<CR>:call VimuxRunCommand("clear; bundle exec rspec " . bufname("%") . ":" . line("."))<CR>
+
+" RSpec.vim mappings
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+"map <Leader>s :call RunNearestSpec()<CR>
+"map <Leader>l :call RunLastSpec()<CR>
+"map <Leader>a :call RunAllSpecs()<CR>
