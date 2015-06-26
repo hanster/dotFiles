@@ -16,6 +16,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'benmills/vimux'
+Plugin 'dkprice/vim-easygrep'
 
 call vundle#end()            " required
 
@@ -41,3 +42,9 @@ let mapleader = ","
 set clipboard=unnamed
 
 map <leader>l :w <CR> :call VimuxRunLastCommand()<CR>
+
+"switch vim windows without using C-W first
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
