@@ -17,6 +17,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'benmills/vimux'
 Plugin 'dkprice/vim-easygrep'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()            " required
 
@@ -48,3 +49,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+set hlsearch
+noremap R :%s///gc<left><left><left>
