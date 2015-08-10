@@ -18,7 +18,8 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'benmills/vimux'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'scrooloose/syntastic'
-
+Plugin 'scrooloose/nerdtree'
+Plugin 'ntpeters/vim-better-whitespace'
 call vundle#end()            " required
 
 filetype plugin indent on
@@ -52,3 +53,7 @@ map <C-l> <C-w>l
 
 set hlsearch
 noremap R :%s///gc<left><left><left>
+
+set noswapfile
+
+map <C-n> :NERDTreeToggle<CR>
