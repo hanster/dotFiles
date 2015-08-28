@@ -1,0 +1,18 @@
+# Clone zgen if you haven't already
+if [ ! -f ~/zgen/zgen.zsh ]; then
+  pushd ~
+  git clone git@github.com:tarjoilija/zgen.git
+  popd
+fi
+source ~/zgen/zgen.zsh
+
+if ! zgen saved; then
+    echo "Creating a zgen save"
+
+    zgen load jimmijj/zsh-syntax-highlighting
+
+    # autosuggestions should be loaded last
+    zgen load tarruda/zsh-autosuggestions
+
+    zgen save
+fi
