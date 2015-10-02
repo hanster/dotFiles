@@ -27,3 +27,6 @@ zle-line-init() {
     zle autosuggest-start
 }
 zle -N zle-line-init
+
+# use emcas shortcut keys in command line (i.e. Ctrl-e for end of line)
+bindkey -e
