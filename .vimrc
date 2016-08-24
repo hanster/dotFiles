@@ -20,12 +20,14 @@ Plugin 'dkprice/vim-easygrep'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'fatih/vim-go'
+Plugin 'pangloss/vim-javascript'
+
 call vundle#end()            " required
 
 filetype plugin indent on
 set number
-inoremap <Esc> <Esc>:w<CR>
-color zenburn
+color Tomorrow-Night-Eighties
 set tabstop=2       " The width of a TAB is set to 2.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having
